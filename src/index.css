@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.welcome-image, .quiz-image, .results-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.welcome-image {
+  background-image: url(assets/Home.jpg);
+}
+
+.quiz-image {
+  background-image: url(assets/Quiz.jpg);
+}
+
+.results-image {
+  background-image: url(assets/Results.jpg);
+}
