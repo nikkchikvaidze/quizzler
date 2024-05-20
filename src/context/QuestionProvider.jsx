@@ -1,5 +1,5 @@
-import { createContext, useContext, useReducer } from 'react';
-import { initialState, reducer } from '../reducer/reducer';
+import { createContext, useContext, useReducer } from "react";
+import { initialState, reducer } from "../reducer/reducer";
 
 const QuestionContext = createContext();
 
@@ -16,7 +16,7 @@ function QuestionProvider({ children }) {
 function useQuestion() {
   const context = useContext(QuestionContext);
   if (context === undefined)
-    throw new Error('Context not available on that level of files');
+    throw new Error("Context not available on that level of files");
   return context;
 }
 

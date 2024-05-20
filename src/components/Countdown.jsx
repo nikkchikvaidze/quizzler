@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useQuestion } from '../context/QuestionProvider';
+import { useEffect, useState } from "react";
+import { useQuestion } from "../context/QuestionProvider";
 
 function Countdown() {
   const [count, setCount] = useState(180);
-  const {dispatch} = useQuestion();
+  const { dispatch } = useQuestion();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -23,7 +23,7 @@ function Countdown() {
 
   useEffect(() => {
     if (count < 1) {
-      dispatch({ type: 'timeout', payload: true });
+      dispatch({ type: "timeout", payload: true });
     }
   }, [count, dispatch]);
 
@@ -31,8 +31,8 @@ function Countdown() {
   const seconds = count % 60;
 
   return (
-    <span className={`counter-text ${count < 60 && 'danger'}`}>
-      {`0${minutes} :`} {`${seconds < 10 ? '0' + seconds : seconds}`}
+    <span className={`md:text-xl ${count < 60 && "text-red-700 animate-ping"}`}>
+      {`0${minutes} :`} {`${seconds < 10 ? "0" + seconds : seconds}`}
     </span>
   );
 }

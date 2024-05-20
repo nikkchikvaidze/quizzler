@@ -12,16 +12,16 @@ function App() {
 
   return (
     <div>
-      {status === 'init' && <Welcome />}
-      {status === 'active' && (
+      {status === "init" && <Welcome />}
+      {status === "active" && (
         <Main>
           <Question />
           <Option />
         </Main>
       )}
-      {(status === 'finish' || status === 'timeout') && <Finish />}
+      {(status === "finish" || status === "timeout") && <Finish />}
     </div>
   );
 }
 
-export default App
+export default App;
